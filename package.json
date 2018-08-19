@@ -1,6 +1,6 @@
 {
   "name": "vue-floating-label",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "scripts": {
     "build-bundle": "vue-cli-service build --target lib --name VueFloatingLabel ./src/components/index.js",
