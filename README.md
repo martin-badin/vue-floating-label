@@ -20,6 +20,15 @@
 }
 ```
 
+### align
+
+```javascript
+{
+  type: String,
+  default: 'center'
+}
+```
+
 ## Project setup
 
 ````
