@@ -3,7 +3,9 @@
     <div class="floating-label--inner">
       <span :class="{
         'floating-label--label': true,
-        'floating-label--label__top': showOnTop
+        'floating-label--label__top': showOnTop,
+        'floating-label--label__align-center': align === 'center',
+        'floating-label--label__align-top': align === 'top'
       }">{{ label }}</span>
       <slot></slot>
     </div>
@@ -21,6 +23,10 @@ export default {
     showOnTop: {
       type: Boolean,
       default: false
+    },
+    align: {
+      type: String,
+      default: "center"
     }
   }
 };
@@ -37,14 +43,21 @@ export default {
   &--label {
     position: absolute;
     left: 0;
-
     transition: all 200ms ease-in-out;
 
     &:not(&__top) {
       padding-left: 10px;
       padding-right: 10px;
-      top: 50%;
-      transform: translate(0, -50%);
+    }
+
+    &__align {
+      &-top {
+        top: 0;
+      }
+      &-center {
+        top: 50%;
+        transform: translate(0, -50%);
+      }
     }
 
     &__top {
@@ -56,4 +69,3 @@ export default {
   }
 }
 </style>
-

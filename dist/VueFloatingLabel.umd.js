@@ -138,17 +138,21 @@ __webpack_require__.r(__webpack_exports__);
 // EXTERNAL MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 var setPublicPath = __webpack_require__("1eb2");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"db82b1c6-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FloatingLabel.vue?vue&type=template&id=2d9bd941&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"db82b1c6-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FloatingLabel.vue?vue&type=template&id=55d7fd86&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"floating-label"},[_c('div',{staticClass:"floating-label--inner"},[_c('span',{class:{
       'floating-label--label': true,
-      'floating-label--label__top': _vm.showOnTop
+      'floating-label--label__top': _vm.showOnTop,
+      'floating-label--label__align-center': _vm.align === 'center',
+      'floating-label--label__align-top': _vm.align === 'top'
     }},[_vm._v(_vm._s(_vm.label))]),_vm._t("default")],2)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/FloatingLabel.vue?vue&type=template&id=2d9bd941&
+// CONCATENATED MODULE: ./src/components/FloatingLabel.vue?vue&type=template&id=55d7fd86&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FloatingLabel.vue?vue&type=script&lang=js&
+//
+//
 //
 //
 //
@@ -171,6 +175,10 @@ var staticRenderFns = []
     showOnTop: {
       type: Boolean,
       default: false
+    },
+    align: {
+      type: String,
+      default: "center"
     }
   }
 });

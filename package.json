@@ -1,6 +1,6 @@
 {
   "name": "vue-floating-label",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "main": "dist/VueFloatingLabel.umd.js",
   "scripts": {
@@ -15,6 +15,7 @@
     "@vue/cli-service": "^3.0.1",
     "@vue/eslint-config-prettier": "^3.0.1",
     "eslint": "^5.4.0",
+    "eslint-loader": "^2.1.0",
     "eslint-plugin-vue": "^4.7.1",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
