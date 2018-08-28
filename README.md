@@ -29,6 +29,25 @@
 }
 ```
 
+## Example
+
+```html
+<floating-label label="Label">
+  <input value="">
+</floating-label>
+
+<floating-label label="Label">
+  <select>
+    <option value="">Default</option>
+    <option value="aa">AA</option>
+  </select>
+</floating-label>
+
+<floating-label label="Label" show-on-top>
+  <input value="">
+</floating-label>
+```
+
 ## Project setup
 
 ````

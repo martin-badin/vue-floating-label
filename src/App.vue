@@ -1,7 +1,13 @@
 <template>
   <div id="app">
-    <floating-label label="Label" :show-on-top="showTop">
-      <input>
+    <floating-label label="Label">
+      <input value="">
+    </floating-label>
+    <floating-label label="Label">
+      <select>
+        <option value="">Default</option>
+        <option value="aa">AA</option>
+      </select>
     </floating-label>
   </div>
 </template>
@@ -13,16 +19,6 @@ export default {
   name: "app",
   components: {
     FloatingLabel
-  },
-  data() {
-    return {
-      showTop: false
-    };
-  },
-  mounted() {
-    setTimeout(() => {
-      this.showTop = true;
-    }, 2000);
   }
 };
 </script>
@@ -46,10 +42,12 @@ export default {
   }
 }
 
-input {
+input,
+select {
   display: block;
   border: 1px solid black;
   border-radius: 3px;
   height: 40px;
+  width: 100%;
 }
 </style>

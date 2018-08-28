@@ -1,9 +1,9 @@
 <template>
   <div class="floating-label">
-    <div class="floating-label--inner">
+    <div class="floating-label--inner" ref="inner">
       <span :class="{
         'floating-label--label': true,
-        'floating-label--label__top': showOnTop,
+        'floating-label--label__top': showOnTop || !!this.value,
         'floating-label--label__align-center': align === 'center',
         'floating-label--label__align-top': align === 'top'
       }">{{ label }}</span>
@@ -26,8 +26,27 @@ export default {
     },
     align: {
       type: String,
-      default: "center"
+      default: "center",
+      validate: align => ["center", "top"].indexOf(align) !== -1
     }
+  },
+  data() {
+    return {
+      value: ""
+    };
+  },
+  methods: {
+    onInput(event) {
+      this.value = event.target.value;
+    }
+  },
+  mounted() {
+    this.$refs.element = this.$refs.inner.querySelector("input,select");
+    this.value = this.$refs.element.value;
+    this.$refs.element.addEventListener("input", this.onInput);
+  },
+  destroyed() {
+    this.$refs.element.removeEventListener("input", this.onInput);
   }
 };
 </script>
