@@ -31,6 +31,10 @@
 
 ## Example
 
+```js
+import { FloatingLabel } from "vue-floating-label";
+```
+
 ```html
 <floating-label label="Label">
   <input value="">
