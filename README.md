@@ -1,5 +1,7 @@
 # vue-floating-label
 
+![Vue Video Player](./screenshot.png)
+
 ## Props
 
 ### label
@@ -43,6 +45,7 @@
 
 ```js
 import FloatingLabel from "vue-floating-label";
+import "vue-floating-label/dist/VueFloatingLabel.css";
 ```
 
 ```html
