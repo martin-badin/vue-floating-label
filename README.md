@@ -1,6 +1,6 @@
 # vue-floating-label
 
-![Vue Video Player](./screenshot.png)
+![Vue Floating Label](./screenshot.png)
 
 ## Props
 
