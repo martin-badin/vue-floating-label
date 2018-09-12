@@ -129,7 +129,7 @@ __webpack_require__.r(__webpack_exports__);
 // EXTERNAL MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 var setPublicPath = __webpack_require__("1eb2");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"db82b1c6-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FloatingLabel.vue?vue&type=template&id=11624ac7&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"db82b1c6-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FloatingLabel.vue?vue&type=template&id=6bcff032&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"floating-label"},[_c('div',{ref:"inner",staticClass:"floating-label--inner"},[_c('span',{class:{
       'floating-label--label': true,
       'floating-label--label__top': _vm.showOnTop || !!this.value,
@@ -139,7 +139,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/FloatingLabel.vue?vue&type=template&id=11624ac7&
+// CONCATENATED MODULE: ./src/components/FloatingLabel.vue?vue&type=template&id=6bcff032&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FloatingLabel.vue?vue&type=script&lang=js&
 //
@@ -167,6 +167,10 @@ var staticRenderFns = []
       type: Boolean,
       default: false
     },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     align: {
       type: String,
       default: "center",
@@ -180,18 +184,35 @@ var staticRenderFns = []
       value: ""
     };
   },
+  watch: {
+    disabled: function disabled(newValue) {
+      if (newValue) {
+        this.init();
+      } else {
+        this.destroy();
+      }
+    }
+  },
   methods: {
     onInput: function onInput(event) {
       this.value = event.target.value;
+    },
+    init: function init() {
+      this.$refs.element = this.$refs.inner.querySelector("input,select,textarea");
+      this.value = this.$refs.element.value;
+      this.$refs.element.addEventListener("input", this.onInput);
+    },
+    destroy: function destroy() {
+      this.$refs.element.removeEventListener("input", this.onInput);
     }
   },
   mounted: function mounted() {
-    this.$refs.element = this.$refs.inner.querySelector("input,select,textarea");
-    this.value = this.$refs.element.value;
-    this.$refs.element.addEventListener("input", this.onInput);
+    if (this.disabled) {
+      this.init();
+    }
   },
   destroyed: function destroyed() {
-    this.$refs.element.removeEventListener("input", this.onInput);
+    this.destroy();
   }
 });
 // CONCATENATED MODULE: ./src/components/FloatingLabel.vue?vue&type=script&lang=js&

@@ -1,6 +1,6 @@
 {
   "name": "vue-floating-label",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "MIT",
   "main": "dist/VueFloatingLabel.umd.js",
   "browser": {

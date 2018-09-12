@@ -20,6 +20,15 @@
 }
 ```
 
+### disabled
+
+```javascript
+{
+  type: Boolean,
+  default: false
+}
+```
+
 ### align
 
 ```javascript

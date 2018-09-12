@@ -24,6 +24,10 @@ export default {
       type: Boolean,
       default: false
     },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     align: {
       type: String,
       default: "center",
@@ -35,20 +39,37 @@ export default {
       value: ""
     };
   },
+  watch: {
+    disabled(newValue) {
+      if (newValue) {
+        this.init();
+      } else {
+        this.destroy();
+      }
+    }
+  },
   methods: {
     onInput(event) {
       this.value = event.target.value;
+    },
+    init() {
+      this.$refs.element = this.$refs.inner.querySelector(
+        "input,select,textarea"
+      );
+      this.value = this.$refs.element.value;
+      this.$refs.element.addEventListener("input", this.onInput);
+    },
+    destroy() {
+      this.$refs.element.removeEventListener("input", this.onInput);
     }
   },
   mounted() {
-    this.$refs.element = this.$refs.inner.querySelector(
-      "input,select,textarea"
-    );
-    this.value = this.$refs.element.value;
-    this.$refs.element.addEventListener("input", this.onInput);
+    if (this.disabled) {
+      this.init();
+    }
   },
   destroyed() {
-    this.$refs.element.removeEventListener("input", this.onInput);
+    this.destroy();
   }
 };
 </script>
