@@ -82,7 +82,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "fae3");
+/******/ 	return __webpack_require__(__webpack_require__.s = "fb15");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -120,7 +120,7 @@ if (typeof window !== 'undefined') {
 
 /***/ }),
 
-/***/ "fae3":
+/***/ "fb15":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -339,10 +339,11 @@ component.options.__file = "FloatingLabel.vue"
 /* harmony default export */ var FloatingLabel = (component.exports);
 // CONCATENATED MODULE: ./src/components/index.js
 
+/* harmony default export */ var components = (FloatingLabel);
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib-no-default.js
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "FloatingLabel", function() { return FloatingLabel; });
 
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (components);
 
 
 

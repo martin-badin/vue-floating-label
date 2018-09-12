@@ -1,3 +1,3 @@
 import FloatingLabel from "./FloatingLabel.vue";
 
-export { FloatingLabel };
+export default FloatingLabel;

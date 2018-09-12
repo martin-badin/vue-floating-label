@@ -1,6 +1,7 @@
 {
   "name": "vue-floating-label",
-  "version": "0.1.4",
+  "version": "0.1.5",
+  "author": "Martin Badin",
   "license": "MIT",
   "main": "dist/VueFloatingLabel.umd.js",
   "browser": {
@@ -24,5 +25,13 @@
     "sass-loader": "^7.0.1",
     "vue": "^2.5.17",
     "vue-template-compiler": "^2.5.17"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martin-badin/vue-floating-label.git"
+  },
+  "bugs": {
+    "url": "https://github.com/martin-badin/vue-floating-label/issues"
+  },
+  "homepage": "https://github.com/martin-badin/vue-floating-label/blob/master/README.md"
 }
