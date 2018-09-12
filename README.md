@@ -4,7 +4,7 @@
 
 ### label
 
-```javascript
+```js
 {
   type: String,
   required: true
@@ -13,7 +13,7 @@
 
 ### showOnTop
 
-```javascript
+```js
 {
   type: Boolean,
   default: false
@@ -22,7 +22,7 @@
 
 ### disabled
 
-```javascript
+```js
 {
   type: Boolean,
   default: false
@@ -31,17 +31,18 @@
 
 ### align
 
-```javascript
+```js
 {
   type: String,
-  default: 'center'
+  default: 'center',
+  validate: align => ["center", "top"].indexOf(align) !== -1
 }
 ```
 
 ## Example
 
 ```js
-import { FloatingLabel } from "vue-floating-label";
+import FloatingLabel from "vue-floating-label";
 ```
 
 ```html
@@ -59,32 +60,12 @@ import { FloatingLabel } from "vue-floating-label";
 <floating-label label="Label" show-on-top>
   <input value="">
 </floating-label>
+
+<floating-label label="Label">
+  <textarea></textarea>
+</floating-label>
+
+<floating-label label="Label" disabled>
+  <input type="file">
+</floating-label>
 ```
-
-## Project setup
-
-````
-yarn install
-
-```
-### Compiles and hot-reloads for development
-```
-
-yarn run serve
-
-```
-### Compiles and minifies for production
-```
-
-yarn run build
-
-```
-### Lints and fixes files
-```
-
-yarn run lint
-
-```
-
-```
-````
