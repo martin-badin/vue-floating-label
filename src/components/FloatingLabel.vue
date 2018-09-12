@@ -41,7 +41,9 @@ export default {
     }
   },
   mounted() {
-    this.$refs.element = this.$refs.inner.querySelector("input,select");
+    this.$refs.element = this.$refs.inner.querySelector(
+      "input,select,textarea"
+    );
     this.value = this.$refs.element.value;
     this.$refs.element.addEventListener("input", this.onInput);
   },
