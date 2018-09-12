@@ -9,6 +9,12 @@
         <option value="aa">AA</option>
       </select>
     </floating-label>
+    <floating-label label="Label">
+      <textarea></textarea>
+    </floating-label>
+    <floating-label label="Label" disabled>
+      <input type="file">
+    </floating-label>
   </div>
 </template>
 
@@ -43,7 +49,8 @@ export default {
 }
 
 input,
-select {
+select,
+textarea {
   display: block;
   border: 1px solid black;
   border-radius: 3px;

@@ -64,7 +64,7 @@ export default {
     }
   },
   mounted() {
-    if (this.disabled) {
+    if (!this.disabled) {
       this.init();
     }
   },
