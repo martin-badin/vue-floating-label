@@ -171,19 +171,21 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9b9ece72-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FloatingLabel.vue?vue&type=template&id=c50ec8ea&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"e967e078-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FloatingLabel.vue?vue&type=template&id=626fbd2a&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"floating-label"},[_c('div',{ref:"inner",staticClass:"floating-label--inner"},[_c('span',{class:{
-      'floating-label--label': true,
-      'floating-label--label__top': _vm.showOnTop || !!this.value,
-      'floating-label--label__align-center': _vm.align === 'center',
-      'floating-label--label__align-top': _vm.align === 'top'
-    }},[_vm._v(_vm._s(_vm.label))]),_vm._t("default")],2)])}
+        'floating-label--label': true,
+        'floating-label--label__top': _vm.showOnTop || !!this.value,
+        'floating-label--label__align-center': _vm.align === 'center',
+        'floating-label--label__align-top': _vm.align === 'top'
+      }},[_vm._v(_vm._s(_vm.label))]),_vm._t("default")],2)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/FloatingLabel.vue?vue&type=template&id=c50ec8ea&
+// CONCATENATED MODULE: ./src/components/FloatingLabel.vue?vue&type=template&id=626fbd2a&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FloatingLabel.vue?vue&type=script&lang=js&
+//
+//
 //
 //
 //

@@ -1,12 +1,14 @@
 <template>
   <div class="floating-label">
     <div class="floating-label--inner" ref="inner">
-      <span :class="{
-        'floating-label--label': true,
-        'floating-label--label__top': showOnTop || !!this.value,
-        'floating-label--label__align-center': align === 'center',
-        'floating-label--label__align-top': align === 'top'
-      }">{{ label }}</span>
+      <span
+        :class="{
+          'floating-label--label': true,
+          'floating-label--label__top': showOnTop || !!this.value,
+          'floating-label--label__align-center': align === 'center',
+          'floating-label--label__align-top': align === 'top'
+        }"
+      >{{ label }}</span>
       <slot></slot>
     </div>
   </div>
