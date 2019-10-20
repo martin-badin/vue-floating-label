@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <floating-label label="Label">
-      <input value="">
+      <input value />
     </floating-label>
     <floating-label label="Label">
       <select>
-        <option value="">Default</option>
+        <option value>Default</option>
         <option value="aa">AA</option>
       </select>
     </floating-label>
@@ -13,7 +13,7 @@
       <textarea></textarea>
     </floating-label>
     <floating-label label="Label" disabled>
-      <input type="file">
+      <input type="file" />
     </floating-label>
   </div>
 </template>
